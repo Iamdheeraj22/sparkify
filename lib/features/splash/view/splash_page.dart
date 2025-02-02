@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sparkify/cores/internet/internet_cubit.dart';
 import 'package:sparkify/cores/storage/local_storage_data.dart';
 import 'package:sparkify/features/authentication/view/pages/login_page.dart';
+import 'package:sparkify/features/on_boarding/view/pages/on_boarding_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({
@@ -24,7 +25,7 @@ class _SplashPageState extends State<SplashPage> {
       if (!widget.isLoggedIn && mounted) {
         Navigator.pushNamedAndRemoveUntil(
           context,
-          LoginPage.route,
+          OnBoardingPage.route,
           (_) => false,
         );
       }
